@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <com.example.numpiy.GameView
+        android:id="@+id/view_game"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#102000"
+        android:alpha="0.8"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true">
+                <ImageView
+                    android:src="@drawable/apple"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    />
+                <TextView
+                    android:id="@+id/apples"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:text="x 0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true">
+                <ImageView
+                    android:src="@drawable/score"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    app:tint="#FFEB3B" />
+                <TextView
+                    android:id="@+id/best_score"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:text="x 0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
